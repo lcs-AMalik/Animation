@@ -30,7 +30,7 @@ import PlaygroundSupport
 import CanvasGraphics
 
 // Create canvas
-let canvas = Canvas(width: preferredWidth, height: preferredHeight)
+let canvas = Canvas(width: preferredWidth, height: preferredHeight, quality: .Ultra)
 
 // Show the canvas in the playground's live view
 PlaygroundPage.current.liveView = canvas
@@ -68,7 +68,7 @@ canvas.drawLine(from: Point(x: 185, y: 686), to: Point(x: 185, y:680 ), capStyle
 canvas.drawShapesWithFill = true
 canvas.drawShapesWithBorders = true
 canvas.fillColor = Color.white
-canvas.defaultBorderWidth = 7
+canvas.defaultBorderWidth = 2
 var vertices: [Point] = []
 vertices.append(Point(x: 147, y: 543))
 vertices.append(Point(x: 209, y: 712))
@@ -113,7 +113,7 @@ canvas.drawLine(from: Point(x: 350, y: 243), to: Point(x: 327, y:25 ), capStyle:
 
 
 
-
+canvas.copyToClipboard()
 
 
 

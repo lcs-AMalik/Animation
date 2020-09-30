@@ -1,7 +1,3 @@
-//: [Previous](@previous)
-
-import Foundation
-//: [Previous](@previous) / [Next](@next)
 //: # Blank canvas to copy
 //:
 //: ## To duplicate this page
@@ -19,8 +15,8 @@ import Foundation
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 500
-let preferredHeight = 500
+let preferredWidth = 400
+let preferredHeight = 600
 /*:
  ## Required code
  
@@ -45,42 +41,69 @@ PlaygroundPage.current.liveView = canvas
  You can remove the code on line 49 and begin writing your own code.
  
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
-
+ 
  */
+
+// Replace this comment with your first comment – what is the goal of the code you're about to write?
+
+let limeGreen = Color(hue: 106, saturation: 64, brightness: 73, alpha: 100)
+let offWhite = Color(hue: 81, saturation: 5, brightness: 88, alpha: 100)
+
+// turn off boarders
+canvas.drawShapesWithBorders = false
+
+
+// Green background
+canvas.fillColor = limeGreen
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
+
+
+// Black background for bottom part
+canvas.fillColor = Color.black
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 400)
+
+// Draw a line of circles
+for y in stride(from: 0,
+                through: 400,
+                by: 40) {
+    
+    for x in stride(from: 0,
+                    through: 400,
+                    by: 40) {
+        
+        // code in this block is repeated 10 * 10 = 100
+        x
+        
+        // Set the fill
+        if x == 0 {
+            canvas.fillColor = limeGreen
+        } else if y == 0 {
+            canvas.fillColor = limeGreen
+        } else if y == 400 {
+            canvas.fillColor = limeGreen
+        } else if x == 400 {
+            canvas.fillColor = limeGreen
+        }  else if x + y > 400 && x != 0 && x != 400 {
+            canvas.fillColor = limeGreen
+        } else {
+            canvas.fillColor = offWhite
+            
+        }
+        
+        // Draw circle
+        canvas.drawEllipse(at: Point(x: x, y: y),
+                           width: 35,
+                           height: 35)
+        
+    }
+    
+}
+
+
+
 
 // Draw the Axis with a scale
 canvas.drawAxes(withScale: true, by: 50)
-
-// Draw a line of circles
-
-for y in stride(from: 0,
-                to: 500,
-                by: 50) {
-
-    for x in stride(from: 0,
-                    to: 500,
-                    by: 50) {
-        
-        let decisionMaker = Int.random(in: 1...2)
-        
-        if decisionMaker == 1 {
-            canvas.drawLine(from: Point(x: x, y: y), to: Point(x: x + 50, y: y + 50))
-            
-        } else if decisionMaker == 3 {
-        
-            canvas.drawLine(from: Point(x: x, y: y), to: Point(x: x + 50, y: y + 50))
-            
-        } else {
-            canvas.drawLine(from: Point(x: x, y: y + 50), to: Point(x: x + 50, y: y))
-
-        }
-
-       
-        
-    }
-
-    
-}
 /*:
  ## Show the Assistant Editor
  Don't see any results?
@@ -88,7 +111,7 @@ for y in stride(from: 0,
  Remember to show the Assistant Editor (1), and then switch to Live View (2):
  
  ![timeline](timeline.png "Timeline")
-
+ 
  ## Use source control
  To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
  
@@ -97,6 +120,4 @@ for y in stride(from: 0,
  ![source_control](source-control.png "Source Control")
  */
 
-var str = "Hello, playground"
 
-//: [Next](@next)
