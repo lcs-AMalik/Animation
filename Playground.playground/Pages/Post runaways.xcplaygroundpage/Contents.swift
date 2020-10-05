@@ -98,15 +98,26 @@ canvas.drawShapesWithFill = true
 canvas.drawShapesWithBorders = true
 canvas.lineColor = Color.white
 
-canvas.drawLine(from: Point(x: 0, y: 50), to: Point(x: 50, y: 50 ))
-canvas.drawLine(from: Point(x: 50, y: 0), to: Point(x: 50, y: 50 ))
+//canvas.drawLine(from: Point(x: 0, y: 50), to: Point(x: 50, y: 50 ))
+//canvas.drawLine(from: Point(x: 50, y: 0), to: Point(x: 50, y: 50 ))
+//
+//canvas.drawLine(from: Point(x: 100, y: 0), to: Point(x: 100, y: 100 ))
+//canvas.drawLine(from: Point(x: 0, y: 100), to: Point(x: 100, y: 100 ))
+//
+//canvas.drawLine(from: Point(x: 0, y: 150), to: Point(x: 150, y: 150 ))
+//canvas.drawLine(from: Point(x: 150, y: 0), to: Point(x: 150, y: 150 ))
 
-canvas.drawLine(from: Point(x: 100, y: 0), to: Point(x: 100, y: 100 ))
-canvas.drawLine(from: Point(x: 0, y: 100), to: Point(x: 100, y: 100 ))
-
-canvas.drawLine(from: Point(x: 0, y: 150), to: Point(x: 150, y: 150 ))
-canvas.drawLine(from: Point(x: 150, y: 0), to: Point(x: 150, y: 150 ))
-
+for step in stride(from: 0,
+                through: 150,
+                by: 50) {
+    
+    step
+    
+    canvas.drawLine(from: Point(x: 0, y: step), to: Point(x: step, y: step ))
+    canvas.drawLine(from: Point(x: step, y: 0), to: Point(x: step, y: step ))
+    
+    
+}
 
     
 
