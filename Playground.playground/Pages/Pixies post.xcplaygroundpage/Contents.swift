@@ -47,62 +47,155 @@ PlaygroundPage.current.liveView = canvas
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
 
 let limeGreen = Color(hue: 106, saturation: 64, brightness: 73, alpha: 100)
+
 let offWhite = Color(hue: 81, saturation: 5, brightness: 88, alpha: 100)
 
+
+
 // turn off boarders
+
 canvas.drawShapesWithBorders = false
 
 
+
+
+
 // Green background
+
 canvas.fillColor = limeGreen
+
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
 
+
+// Text
+
+canvas.drawText(message: "pixies", at: Point(x: 40, y: 420), size: 60, kerning: 0 )
+
+
+
+canvas.drawText(message: "Saturday", at: Point(x: 40, y: 550), size: 12, kerning: 0 )
+
+
+
+canvas.drawText(message: "december 13 1986", at: Point(x: 40, y: 530), size: 12, kerning: 0 )
+
+canvas.drawText(message: "9 pm over 21", at: Point(x: 40, y: 510), size: 12, kerning: 0 )
+
+
+
+canvas.drawText(message: "at the rat", at: Point(x: 275, y: 550), size: 12, kerning: 0 )
+
+
+
+canvas.drawText(message: "528 commonwealth", at: Point(x: 275, y: 530), size: 12, kerning: 0 )
+
+canvas.drawText(message: "boston, mass.", at: Point(x: 275, y: 510), size: 12, kerning: 0 )
+
+canvas.textColor = offWhite
+
+canvas.drawText(message: "with", at: Point(x: 275, y: 470), size: 15, kerning: 0 )
+
+canvas.drawText(message: "throwing muses", at: Point(x: 275, y: 455), size: 15, kerning: 0 )
+
+canvas.drawText(message: "Big dipper", at: Point(x: 275, y: 440), size: 15, kerning: 0 )
+
+
+
+
+
+
+
 // Black background for bottom part
+
 canvas.fillColor = Color.black
+
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 400)
 
+
+
 // Draw a line of circles
+
 for y in stride(from: 0,
+
                 through: 400,
+
                 by: 40) {
+
     
+
     for x in stride(from: 0,
+
                     through: 400,
+
                     by: 40) {
+
         
+
         // code in this block is repeated 10 * 10 = 100
+
         x
+
         
+
         // Set the fill
+
         if x == 0 {
+
             canvas.fillColor = limeGreen
+
         } else if y == 0 {
+
             canvas.fillColor = limeGreen
+
         } else if y == 400 {
+
             canvas.fillColor = limeGreen
+
         } else if x == 400 {
+
             canvas.fillColor = limeGreen
+
         }  else if x + y > 400 && x != 0 && x != 400 {
+
             canvas.fillColor = limeGreen
+
         } else {
+
             canvas.fillColor = offWhite
+
             
+
         }
+
         
+
         // Draw circle
+
         canvas.drawEllipse(at: Point(x: x, y: y),
+
                            width: 35,
+
                            height: 35)
+
         
+
     }
+
     
+
 }
 
 
 
 
+
+
+
+
+
 // Draw the Axis with a scale
+
 canvas.drawAxes(withScale: true, by: 50)
 /*:
  ## Show the Assistant Editor
