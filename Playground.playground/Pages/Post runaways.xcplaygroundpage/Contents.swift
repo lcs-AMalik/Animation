@@ -64,7 +64,7 @@ canvas.fillColor = pink
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
 // Draw line thickness
-canvas.defaultLineWidth = 12
+canvas.defaultLineWidth = 15
 
 // Draw a line
 //canvas.lineColor = Color.black
@@ -122,15 +122,33 @@ for step in stride(from: 0,
     
 
 
+// Draw a line
+canvas.lineColor = Color.black
+canvas.drawLine(from: Point(x: 375, y: 0), to: Point(x: 375, y: 25 ))
+canvas.drawLine(from: Point(x: 400, y: 25), to: Point(x: 375, y: 25 ))
 
+canvas.drawLine(from: Point(x: 325, y: 0), to: Point(x: 325, y: 75 ))
+canvas.drawLine(from: Point(x: 400, y: 75), to: Point(x: 325, y: 75 ))
 
+canvas.drawLine(from: Point(x: 275, y: 0), to: Point(x: 275, y: 125 ))
+canvas.drawLine(from: Point(x: 400, y: 125), to: Point(x: 275, y: 125 ))
 
+canvas.drawLine(from: Point(x: 225, y: 0), to: Point(x: 225, y: 175 ))
+canvas.drawLine(from: Point(x: 400, y: 175), to: Point(x: 225, y: 175 ))
 
+// Draw line color
+canvas.drawShapesWithFill = true
+canvas.drawShapesWithBorders = true
+canvas.lineColor = Color.white
 
+canvas.drawLine(from: Point(x: 350, y: 0), to: Point(x: 350, y: 50 ))
+canvas.drawLine(from: Point(x: 400, y: 50), to: Point(x: 350, y: 50 ))
 
+canvas.drawLine(from: Point(x: 300, y: 0), to: Point(x: 300, y: 100 ))
+canvas.drawLine(from: Point(x: 400, y: 100), to: Point(x: 300, y: 100 ))
 
-
-
+canvas.drawLine(from: Point(x: 250, y: 0), to: Point(x: 250, y: 150 ))
+canvas.drawLine(from: Point(x: 400, y: 150), to: Point(x: 250, y: 150 ))
 
 
 
