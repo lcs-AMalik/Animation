@@ -66,21 +66,59 @@ canvas.borderColor = Color.white
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
 // Draw custom shape
-canvas.fillColor = Color.black
-var vertices: [Point] = []
-vertices.append(Point(x: 0, y: 0)) //1
-vertices.append(Point(x: 60, y: 0))
-vertices.append(Point(x: 60, y: 15))
-vertices.append(Point(x: 25, y: 15))
-vertices.append(Point(x: 80, y: 70))
-vertices.append(Point(x: 70, y: 80))
-vertices.append(Point(x: 15, y: 25))
-vertices.append(Point(x: 15, y: 60))
-vertices.append(Point(x: 0, y: 60))
-vertices.append(Point(x: 0, y: 0))
-canvas.drawCustomShape(with: vertices)
+//canvas.fillColor = Color.black
+//var vertices: [Point] = []
+//vertices.append(Point(x: 0, y: 0)) //1
+//vertices.append(Point(x: 60, y: 0)) //2
+//vertices.append(Point(x: 60, y: 15)) //3
+//vertices.append(Point(x: 25, y: 15)) //4
+//vertices.append(Point(x: 80, y: 70)) //5
+//vertices.append(Point(x: 70, y: 80)) //6
+//vertices.append(Point(x: 15, y: 25)) //7
+//vertices.append(Point(x: 15, y: 60)) //8
+//vertices.append(Point(x: 0, y: 60)) //9
+//vertices.append(Point(x: 0, y: 0)) //1
+//canvas.drawCustomShape(with: vertices)
     
+// Draw a line of arrows
+
+for y in stride(from: 0,
+
+                through: 320,
+
+                by: 80) {
+
+
+    for x in stride(from: 0,
+
+                    through: 320,
+
+                    by: 80) {
+
+        // code in this block is repeated 5 * 5 = 25
+
+        x
+        
+        
+        // Draw custom shape
+        canvas.fillColor = Color.purple
+        var vertices: [Point] = []
+        vertices.append(Point(x: x, y: y)) //1
+        vertices.append(Point(x: x + 60, y: y)) //2
+        vertices.append(Point(x: x + 60, y: y + 15)) //3
+        vertices.append(Point(x: x + 25, y: y + 15)) //4
+        vertices.append(Point(x: x + 80, y: y + 70)) //5
+        vertices.append(Point(x: x + 70, y: y + 80)) //6
+        vertices.append(Point(x: x + 15, y: y + 25)) //7
+        vertices.append(Point(x: x + 15, y: y + 60)) //8
+        vertices.append(Point(x: x + 0, y: y + 60)) //9
+        vertices.append(Point(x: x + 0, y: y)) //1
+        canvas.drawCustomShape(with: vertices)
+        
+    }
     
+}
+
  
 
 
