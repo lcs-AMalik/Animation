@@ -76,12 +76,8 @@ canvas.drawText(message: "atben h.lewis hall", at: Point(x: 280, y: 550), size: 
 canvas.drawText(message: "3443 orange st.", at: Point(x: 280, y: 535), size: 10, kerning: 0 )
 canvas.drawText(message: "riverside, california", at: Point(x: 280, y: 520), size: 10, kerning: 0 )
 
-
-
-
 canvas.textColor = Color.white
 canvas.drawText(message: "the runaways", at: Point(x: 15, y: 420), size: 50, kerning: 0 )
-
 
 // Draw a line
 //canvas.lineColor = Color.black
@@ -137,20 +133,18 @@ for step in stride(from: 0,
 }
 
     
-
-
 // Draw a line
 canvas.lineColor = Color.black
-canvas.drawLine(from: Point(x: 375, y: 0), to: Point(x: 375, y: 25 ))
+canvas.drawLine(from: Point(x: 400 - 25, y: 0), to: Point(x: 375, y: 25 ))
 canvas.drawLine(from: Point(x: 400, y: 25), to: Point(x: 375, y: 25 ))
 
-canvas.drawLine(from: Point(x: 325, y: 0), to: Point(x: 325, y: 75 ))
+canvas.drawLine(from: Point(x: 400 - 75, y: 0), to: Point(x: 325, y: 75 ))
 canvas.drawLine(from: Point(x: 400, y: 75), to: Point(x: 325, y: 75 ))
 
-canvas.drawLine(from: Point(x: 275, y: 0), to: Point(x: 275, y: 125 ))
+canvas.drawLine(from: Point(x: 400 - 125, y: 0), to: Point(x: 275, y: 125 ))
 canvas.drawLine(from: Point(x: 400, y: 125), to: Point(x: 275, y: 125 ))
 
-canvas.drawLine(from: Point(x: 225, y: 0), to: Point(x: 225, y: 175 ))
+canvas.drawLine(from: Point(x: 400 - 175, y: 0), to: Point(x: 225, y: 175 ))
 canvas.drawLine(from: Point(x: 400, y: 175), to: Point(x: 225, y: 175 ))
 
 // Draw line color
@@ -158,13 +152,13 @@ canvas.drawShapesWithFill = true
 canvas.drawShapesWithBorders = true
 canvas.lineColor = Color.white
 
-canvas.drawLine(from: Point(x: 350, y: 0), to: Point(x: 350, y: 50 ))
+canvas.drawLine(from: Point(x: 400 - 50, y: 0), to: Point(x: 350, y: 50 ))
 canvas.drawLine(from: Point(x: 400, y: 50), to: Point(x: 350, y: 50 ))
 
-canvas.drawLine(from: Point(x: 300, y: 0), to: Point(x: 300, y: 100 ))
+canvas.drawLine(from: Point(x: 400 - 100, y: 0), to: Point(x: 300, y: 100 ))
 canvas.drawLine(from: Point(x: 400, y: 100), to: Point(x: 300, y: 100 ))
 
-canvas.drawLine(from: Point(x: 250, y: 0), to: Point(x: 250, y: 150 ))
+canvas.drawLine(from: Point(x: 400 - 150, y: 0), to: Point(x: 250, y: 150 ))
 canvas.drawLine(from: Point(x: 400, y: 150), to: Point(x: 250, y: 150 ))
 
 
@@ -173,8 +167,8 @@ canvas.drawLine(from: Point(x: 400, y: 150), to: Point(x: 250, y: 150 ))
 canvas.drawLine(from: Point(x: 0, y: 250), to: Point(x: 150, y: 250 ))
 canvas.drawLine(from: Point(x: 150, y: 250), to: Point(x: 150, y: 400 ))
 
+canvas.drawLine(from: Point(x: 0, y: 300), to: Point(x: 100, y: 300 ))
 canvas.drawLine(from: Point(x: 100, y: 300), to: Point(x: 100, y: 400 ))
-canvas.drawLine(from: Point(x: 100, y: 300), to: Point(x: 0, y: 300 ))
 
 canvas.drawLine(from: Point(x: 0, y: 350), to: Point(x: 50, y: 350 ))
 canvas.drawLine(from: Point(x: 50, y: 350), to: Point(x: 50, y: 400 ))

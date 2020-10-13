@@ -50,27 +50,38 @@ PlaygroundPage.current.liveView = canvas
 
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
 
-for x in stride(from: 50,
+    // COLORS
+    let black = Color(hue: 0, saturation: 0, brightness: 0, alpha: 100)
+    let purple = Color(hue: 309, saturation: 78, brightness: 64, alpha: 100)
+    let offWhite = Color(hue: 83, saturation: 4, brightness: 89, alpha: 100)
 
-                through: 400,
+// turn off boarders
+canvas.drawShapesWithBorders = false
 
-                by: 50) {
+// black background
+canvas.fillColor = Color.white
+canvas.borderColor = Color.white
+
+// Draw background
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
+
+// Draw custom shape
+canvas.fillColor = Color.black
+var vertices: [Point] = []
+vertices.append(Point(x: 0, y: 0)) //1
+vertices.append(Point(x: 60, y: 0))
+vertices.append(Point(x: 60, y: 15))
+vertices.append(Point(x: 25, y: 15))
+vertices.append(Point(x: 80, y: 70))
+vertices.append(Point(x: 70, y: 80))
+vertices.append(Point(x: 15, y: 25))
+vertices.append(Point(x: 15, y: 60))
+vertices.append(Point(x: 0, y: 60))
+vertices.append(Point(x: 0, y: 0))
+canvas.drawCustomShape(with: vertices)
     
-    if x % 100 == 0 {
-        // white
-    } else {
-        // black
-    }
-// Draw line
-
-    canvas.drawLine(from: Point(x: 160, y: 550), to: Point(x: 160, y:450 ))
-
     
-}
-
-
-
-
+ 
 
 
 // Draw the Axis with a scale
