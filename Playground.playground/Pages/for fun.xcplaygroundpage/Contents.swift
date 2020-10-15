@@ -99,9 +99,14 @@ for y in stride(from: 0,
 
         x
         
+        // set the fill
+        if x == y {
+            canvas.fillColor = offWhite
+        } else {
+            canvas.fillColor = purple
+        }
         
         // Draw custom shape
-        canvas.fillColor = Color.purple
         var vertices: [Point] = []
         vertices.append(Point(x: x, y: y)) //1
         vertices.append(Point(x: x + 60, y: y)) //2
@@ -118,6 +123,7 @@ for y in stride(from: 0,
     }
     
 }
+
 
  
 
