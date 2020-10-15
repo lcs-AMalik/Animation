@@ -59,27 +59,38 @@ PlaygroundPage.current.liveView = canvas
 canvas.drawShapesWithBorders = false
 
 // black background
-canvas.fillColor = Color.white
-canvas.borderColor = Color.white
+canvas.fillColor = Color.black
+canvas.borderColor = Color.black
 
 // Draw background
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
-// Draw custom shape
-//canvas.fillColor = Color.black
-//var vertices: [Point] = []
-//vertices.append(Point(x: 0, y: 0)) //1
-//vertices.append(Point(x: 60, y: 0)) //2
-//vertices.append(Point(x: 60, y: 15)) //3
-//vertices.append(Point(x: 25, y: 15)) //4
-//vertices.append(Point(x: 80, y: 70)) //5
-//vertices.append(Point(x: 70, y: 80)) //6
-//vertices.append(Point(x: 15, y: 25)) //7
-//vertices.append(Point(x: 15, y: 60)) //8
-//vertices.append(Point(x: 0, y: 60)) //9
-//vertices.append(Point(x: 0, y: 0)) //1
-//canvas.drawCustomShape(with: vertices)
-    
+// Draw text
+
+canvas.textColor = offWhite
+
+canvas.drawText(message: "the velvet underground", at: Point(x: 10, y: 410), size: 30, kerning: 0 )
+
+canvas.drawText(message: "first apperance in london", at: Point(x: 10, y: 540), size: 9, kerning: 0 )
+
+canvas.drawText(message: "with spring and pollyfloskin", at: Point(x: 150, y: 540), size: 9, kerning: 0 )
+
+canvas.drawText(message: "thursday", at: Point(x: 300, y: 540), size: 9, kerning: 0 )
+
+canvas.drawText(message: "the london college or printing", at: Point(x: 10, y: 530), size: 9, kerning: 0 )
+
+canvas.drawText(message: "plus the great western light show", at: Point(x: 150, y: 530), size: 9, kerning: 0 )
+
+canvas.drawText(message: "october 14 1971 /8 pm", at: Point(x: 300, y: 530), size: 9, kerning: 0 )
+
+// Draw line
+canvas.defaultLineWidth = 3
+canvas.lineColor = offWhite
+canvas.drawLine(from: Point(x: 0, y: 460), to: Point(x: 400, y: 460 ), capStyle: .round)
+canvas.drawLine(from: Point(x: 0, y: 570), to: Point(x: 400, y: 570 ), capStyle: .round)
+
+
+
 // Draw a line of arrows
 
 for y in stride(from: 0,
@@ -129,7 +140,7 @@ for y in stride(from: 0,
 
 
 // Draw the Axis with a scale
-canvas.drawAxes(withScale: true, by: 50)
+//canvas.drawAxes(withScale: true, by: 50)
 /*:
  ## Show the Assistant Editor
  Don't see any results?
